@@ -1,4 +1,3 @@
-// import Split from "react-split";
 import Sidebar from "./components/Sidebar";
 import Note from "./components/Note";
 import { useEffect, useState } from "react";
@@ -41,7 +40,6 @@ const App = () => {
     function deleteNote(noteToDeleteId) {
         setNotes(prevNotes => prevNotes.filter(note => note.id !== noteToDeleteId));
 
-        // Automatically select the latest note if the user deletes the currently selected note
         if (noteToDeleteId === currentNoteId && notes.length > 0) {
             setCurrentNoteId(notes[0].id);
         }

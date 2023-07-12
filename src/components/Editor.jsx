@@ -2,7 +2,6 @@ import Form from "react-bootstrap/Form";
 
 function Editor(props) {
     function handleFormChange(event) {
-        // Destructuring event element to name and value
         const {name, value} = event.target;
         props.updateNote({ ...props.currentNote, updatedAt: Date.now(), [name]: value });
     }
